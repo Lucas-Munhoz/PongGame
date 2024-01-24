@@ -14,8 +14,8 @@ import javax.swing.JFrame;
 public class Game extends Canvas implements Runnable,KeyListener{
 
 	private static final long serialVersionUID = 1L;
-	public static int WIDTH = 160;
-	public static int HEIGHT = 120;
+	public static int WIDTH = 320;
+	public static int HEIGHT = 240;
 	public static int SCALE = 3;
 	
 	public BufferedImage layer = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_RGB);
@@ -97,7 +97,7 @@ public class Game extends Canvas implements Runnable,KeyListener{
 			tick();
 			render();
 			try {
-				Thread.sleep(1000/60);
+				Thread.sleep(1000/120);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
